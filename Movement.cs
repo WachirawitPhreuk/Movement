@@ -49,12 +49,12 @@ public class Movement : MonoBehaviour
             }
         }
     }
-    void OnTriggerEnter2D(Collider2D collision)
+    void OnColliderEnter2D(Collider2D collision)
     {
+        Debug.Log("You are on the ground.");
         if(collision.gameObject.tag == "Ground")
         {
                 isGrounded = true;
-                Debug.Log("You are on the ground.");
         }
     }
 }
